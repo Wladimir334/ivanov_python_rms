@@ -11,17 +11,12 @@ class MenuItem:
         self.price = price
         self.weight = weight
 
-    def __str__(self):
-        return f"{self.name} - {self.price} руб, {self.weight} г"
+    def menu_from_file(self, filename):
+        with open("menu.csv", "r") as file:
+            for line in file:
+                return line
 
-    @staticmethod
-    def main():
-        menu_items = [
-            MenuItem("Кофе", 150.0, 200),
-            MenuItem("Чай", 120.0, 180),
-            MenuItem("Пицца", 400.0, 600),
-            MenuItem("Бургер", 250.0, 300)
-    ]
-        return menu_items
+
+
 
 

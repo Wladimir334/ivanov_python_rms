@@ -1,5 +1,7 @@
 # from order import Order
 import sys
+import csv
+from menu import MenuItem
 
 class OrderManager:
     # Order.order_list = []
@@ -17,6 +19,7 @@ class OrderManager:
         print("4. Удалить заказ по идентификатору")
         print("5. Сохранить заказ в CSV файл")
         print("6. Загрузить заказ из CSV файла")
+        print("7. Показать меню")
         print("0. Выход")
 
         self.process_main_menu()
@@ -36,6 +39,8 @@ class OrderManager:
                 self.save_orders_to_csv()
             case "6":
                 self.load_orders_from_csv()
+            case "7":
+                self.menu_from_file()
             case "0":
                 sys.exit()
             case _:
@@ -71,6 +76,10 @@ class OrderManager:
         print('6')
         self.footer_menu()
 
+    def menu_from_file(self):
+        print('7')
+        menu_list =
+        self.footer_menu()
 
     def footer_menu(self):
         print("Введите 1 для выхода в главное меню")
@@ -93,3 +102,4 @@ class OrderManager:
     # delete_order(order_id: int): Удаляет заказ по его идентификатору.
     # save_orders_to_csv(filename: str): Сохраняет заказы в CSV файл.
     # load_orders_from_csv(filename: str): Загружает заказы из CSV файла.
+
