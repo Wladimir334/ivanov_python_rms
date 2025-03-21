@@ -78,7 +78,9 @@ class OrderManager:
 
     def menu_from_file(self):
         print('7')
-        menu_list =
+        with open("menu.csv", "r") as file:
+            for line in file:
+                print(line)
         self.footer_menu()
 
     def footer_menu(self):
